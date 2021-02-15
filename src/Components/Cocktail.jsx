@@ -6,7 +6,7 @@ const Cocktail = (props) => {
     if(!cocktails || cocktails.length === 0) return <p>There Are No Cocktails at the moment</p>;
 
     return(
-        <ul>
+        <div>
             <h2 className="heading">Available Cocktails and Recepies</h2>
             {cocktails.map((cocktail) => {
                 return(
@@ -18,7 +18,7 @@ const Cocktail = (props) => {
                     </div>
                 )
             })}
-        </ul>
+        </div>
     )
 }
 

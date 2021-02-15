@@ -1,31 +1,61 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root{
-  --primaryColor: #
+:root {
+  --primaryColor: #;
 }
-body{
-  background-image: linear-gradient(to bottom right, #fa292a, #151617);
+/* NAVBAR AND LANDING PAGE STYLING */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.cocktail-container{
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 70px;
+}
+.nav-link {
+  margin-right: 1rem;
+  list-style: none;
+}
+.logo,
+.nav-link a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
+.landing-container {
+  height: 100vh;
+  margin: 2rem;
+}
+.landing-image img {
+  height: 70vh;
+  width: 100%;
+}
+/* END NAVBAR AND LANDING STYLING */
+
+.cocktail-container {
   display: flex;
   justify-content: center;
 }
-.cocktail{
-  margin: 2rem 0;
+.cocktail {
+  margin: 1rem 0;
 }
-.cocktail img{
-  border: 2px solid #5a7670;
+.cocktail img {
   border-radius: 10px;
   height: 200px;
   width: 300px;
-  box-shadow: 5px 10px 18px red;
+  box-shadow: 5px 10px 18px #333;
   cursor: pointer;
 }
-.cocktail p{
-  color: #fff;
+.cocktail p {
+  color: #333;
+  padding: 1rem 0;
   font-size: 1.4rem;
   font-weight: 700;
   text-align: center;

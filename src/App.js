@@ -1,37 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './Pages/Home';
+import Drinks from './Pages/Drinks';
+import Food from './Pages/Food';
+import About from './Pages/About';
 import './App.css';
-import withListLoading from './withListLoading';
-import Cocktail from './Cocktail';
+import Navbar from './Components/Navbar';
 
 function App() {
-  const ListLoading = withListLoading(Cocktail);
-  const [appState, setAppState] = useState({
-    cocktails: null,
-  });
-
-  useEffect(() => {
-    axios
-      .get(
-        ' https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-      )
-      .then(cocktails => {
-        setAppState(cocktails.data);
-        console.log(cocktails.data);
-      })
-      .catch(error => console.log(error));
-  }, [setAppState]);
-
 
   return (
     <div className="App">
-      <div className="container">
-        <h1>Available cocktails</h1>
-      </div>  
-      <div className="cocktail-container">
-        <ListLoading isLoading={appState.loading} cocktails={appState.drinks} />
-        <Cocktail/>
-      </div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/drinks" component={Drinks} />
+        <Route path="/food" component={Food} />
+        <Route path="/about" component={About} />
+      </Switch>
     </div>
   );
 }
