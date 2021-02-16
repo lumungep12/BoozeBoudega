@@ -12,7 +12,13 @@ export default class Landing extends Component {
     render() {
         return (
             <div className="landing-container">
-                <Carousel showArrows={true} infiniteLoop autoPlay>
+                <Carousel 
+                    showArrows={true} 
+                    infiniteLoop 
+                    autoPlay
+                    showThumbs={false}
+                    showStatus={false}
+                >
                     <div className="landing-image">
                         <img src={img1} alt=""/>
                     </div>
