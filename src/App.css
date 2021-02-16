@@ -60,3 +60,26 @@ header {
   font-weight: 700;
   text-align: center;
 }
+
+/* SHOWCASE STYLING */
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.drink-wrapper {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  margin: 1rem auto;
+  border: 2px solid #000;
+  padding: 1rem;
+}
+.drink-details {
+  margin-right: 2rem;
+}
+.drink-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+/* END SHOWCASE STYLING */
