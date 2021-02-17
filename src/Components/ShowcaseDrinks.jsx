@@ -1,7 +1,11 @@
 import React from 'react';
+import Ingredients from './Ingredients';
+import { Button } from 'react-bootstrap';
 
 const ShowcaseDrinks = (props) => {
     const { drinks } = props;
+
+    const [modalShow, setModalShow] = React.useState(false);
 
     if(!drinks || drinks.length === 0) return <p>Fetching Cocktails... Shortly</p>
 
@@ -13,11 +17,16 @@ const ShowcaseDrinks = (props) => {
                 <div className="drink-wrapper">
                     <div className="drink-details">
                         <p>{drink.strDrink}</p>
-                        <p className="ingredient">{drink.strIngredient1}</p>
                     </div>
-                    <div className="drink-thumbnail">
+                    <Button variant="" onClick={() => setModalShow(true)}  className="drink-thumbnail">
                         <img src={drink.strDrinkThumb} alt=""/>
-                    </div>
+                    </Button>
+
+                    <Ingredients
+                        drinks={drinks}
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                    />
                 </div>
                 )
             })}

@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #;
+  --primaryColor: #000;
+  --secondaryColor: #fa255e;
+  --tertiaryColor: #c39ea0;
+  --mainWhite: #f8e5e5;
 }
 /* NAVBAR AND LANDING PAGE STYLING */
 header {
@@ -60,6 +63,18 @@ header {
   font-weight: 700;
   text-align: center;
 }
+
+/* INGREDIENTS STYLING */
+.modal-body {
+  text-align: center;
+}
+.ingredients-container li {
+  list-style: none;
+}
+.moody {
+  background-color: var(--secondaryColor);
+}
+/* END INGRDIENTS STYLING */
 
 /* SHOWCASE STYLING */
 .showcase-container {

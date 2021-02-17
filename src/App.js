@@ -5,10 +5,8 @@ import Drinks from './Pages/Drinks';
 import Food from './Pages/Food';
 import About from './Pages/About';
 import './App.css';
-import Navbar from './Components/Navbar';
 
 function App() {
-
   return (
     <div className="App">
       <Switch>
