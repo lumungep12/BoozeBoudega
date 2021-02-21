@@ -5,11 +5,13 @@ import Drinks from './Pages/Drinks';
 import Food from './Pages/Food';
 import About from './Pages/About';
 import './App.css';
+<<<<<<< HEAD
 import Cocktail from './Components/Cocktail';
 // import Cocktails from './Components/Cocktails';
+=======
+>>>>>>> 9f0cec232e7bcb177f1a0a1f2c36881038e5e555
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>
