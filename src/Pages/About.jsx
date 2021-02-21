@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Cocktail from '../Components/Cocktail';
 
-export default class About extends Component {
-    render() {
+export default function About(){
         return (
             <div>
-                <h1>About Page</h1>
+                <Cocktail
+                />
             </div>
         )
-    }
 }
