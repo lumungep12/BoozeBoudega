@@ -9,6 +9,7 @@ function Drinks(){
     const [ cocktails, getCocktails ] = useState([]);
     const [ search, setSearch ] = useState('');
 
+    // Getting all the cocktails
     useEffect(() => {
         axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s')
             .then((res) => {
@@ -18,15 +19,17 @@ function Drinks(){
             .catch(err => console.log(err))
     });
 
-    useEffect((e) => {
-        const drinkName = e.target.elements.cocktailName.value;
-        axios.get(` https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${drinkName}`)
-            .then((res) => {
-                const drink = res.data.drink;
-                setSearch(drink);
-            })
-            .catch(err => console.log(err))
-    });
+    // Getting a Single Cocktail
+    // useEffect((e) => {
+        
+    //     const drinkName = e.target.elements.cocktailName.value;
+    //     axios.get(` https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${drinkName}`)
+    //         .then((res) => {
+    //             const drink = res.data.drink;
+    //             setSearch(drink);
+    //         })
+    //         .catch(err => console.log(err))
+    // });
 
     const handleChange = (e) => {
         setSearch(e.target.value);
