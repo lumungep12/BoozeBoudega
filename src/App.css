@@ -64,6 +64,34 @@ header {
   text-align: center;
 }
 
+/* COCKTAILS STYLING */
+.cocktail-card {
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 500px;
+  height: 420px;
+  margin: 1rem;
+}
+.cocktail-card img {
+  width: 300px;
+  height: 300px;
+}
+.cocktail-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem;
+}
+.cocktail-card .btn {
+  border: 2px solid #333;
+  color: #000;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* END COCKTAILS STYLING */
+
 /* INGREDIENTS STYLING */
 .modal-body {
   text-align: center;

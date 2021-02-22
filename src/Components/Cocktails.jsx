@@ -6,17 +6,21 @@ const Cocktails = props => (
         <div className="row">
             { props.cocktails.map((cocktail) => {
                 return(
-                    <div className="cocktail-card">
+                    <div className="col-md cocktail-card">
                         <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}/>
+                        <div className="cocktail-details">
                         <div className="cocktail-text">
                          <p className="cocktail-name">{cocktail.strDrink}</p>
                         </div>
-                        <button className="btn btn-warning">
+                        <div className="cocktail-btn">
+                        <button className="btn">
                             <Link to={{
                                 pathname: `/cocktail/${cocktail.idDrink}`,
                                 state: { cocktail: cocktail.idDrink}
                             }}> Make One </Link>
                         </button>
+                        </div>
+                        </div>
                     </div>
                 )
             })}
