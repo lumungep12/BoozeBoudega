@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ShowcaseDrinks from './ShowcaseDrinks';
+import Category from './Category';
 import Ingredients from './Ingredients';
 import axios from 'axios';
 
@@ -17,6 +18,9 @@ export default function Showcase(){
     })
     return(
         <>
+        <section className="category">
+            <Category />
+        </section>
             <ShowcaseDrinks
                 drinks={drinks}
             />
